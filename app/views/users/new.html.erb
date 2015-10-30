@@ -1,12 +1,11 @@
-<h1>Test</h1>
-<form id="userform">
-  <p>First name: </p>
-  <input type="text" name="firstname">
-  <p>Last name: </p>
-  <input type="text" name="lastname">
-  <p>Email: </p>
-  <input type="text" name="email">
-  <p>Social Security Number: </p>
-  <p><input type="text" name="socialsecurity"></p>
-  <input type="submit" value="Submit">
-</form>
+<%= form_for @user do |f|%>
+  <p><%= f.label :first_name %></p>
+  <p><%= f.text_field :first_name %></p>
+  <p><%= f.label :last_name %></p>
+  <p><%= f.text_field :last_name %></p>
+  <p><%= f.label :email %></p>
+  <p><%= f.text_field :email %></p>
+  <p><%= f.label :social_security_number %></p>
+  <p><%= f.text_field :social_security_number %></p>
+  <p><%= f.submit %></p>
+<% end %>
